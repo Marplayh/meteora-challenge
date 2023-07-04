@@ -1,0 +1,93 @@
+@import '../../colors.scss';
+
+.father-container{
+    width: 100%;
+    padding: 50px 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    
+    #show-all{
+        width: auto;
+        padding: 10px;
+        align-self: center;
+        background-color: $dark-color;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: inherit;
+        color: $white-color;
+        white-space: nowrap;
+        &:hover{
+            background-color: $dark-color;
+            color: $white-color;
+            outline: 3px solid $green-meteora;
+            cursor: pointer;
+        }
+    }
+
+    @media(max-width: 760px){
+        padding: 50px 20px;
+    }
+}
+.container-search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    
+    h1{
+        font-size: 32px;
+        font-family: inherit;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .cards-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+    }
+    @media (max-width: 968px) { /* tela média */
+        .cards-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      
+      @media (max-width: 680px) { /* tela pequena */
+        .cards-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+}
+.card{
+    width: 160px;
+    img{
+        width: 100%;
+    }
+    .text-card{
+        width: max;
+        flex-direction: row;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark-color;
+        flex-grow: 1;
+        h6{
+            margin: 0;
+            color: $white-color;
+            text-align: center;
+            font-size: 16px;
+            font-family: inherit;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    }
+    &:hover{
+        transform: scale(1.1); /* Aumenta em 10% */
+    transition: transform 0.3s ease; /* Transição suave de 0.3 segundos */
+        cursor: pointer;
+    }
+    
+}

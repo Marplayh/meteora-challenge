@@ -1,0 +1,77 @@
+@import '../../colors.scss';
+
+
+.imagens{
+    height: 415px;
+    width: 100%;
+}
+.texto{
+    color: $white-color;
+    font-family: inherit;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    @media(max-width: 620px){
+        top: 70%;
+        left: 50%;
+    }
+    h1{
+        font-size: 48px;
+        font-family: inherit;
+        white-space: nowrap;
+        @media(max-width: 620px){
+            font-size: 30px;
+        }
+    }
+    p{
+       text-align: end;
+       font-family: inherit;
+       font-size: 20px;
+       white-space: nowrap;
+    }
+}
+
+.terceira .texto{
+    top: 50%;
+    left: 35%;
+    @media(max-width: 620px){
+        top: 70%;
+        left: 50%;
+    }
+    p{
+        text-align: left;
+        font-size: 20px;
+        @media(max-width: 620px){
+            white-space: normal;
+            font-size: 20px;
+        }
+    }
+    
+}
+
+.principal{
+    width: 100%;
+    height: 415px;
+}
+
+@media (max-width: 868px){
+    .carousel-item img:nth-child(1) {
+        display: none;
+    }
+}
+
+
+@media (min-width: 868px),(max-width: 620px) {
+    .carousel-item img:nth-child(2) {
+        display: none;
+    }
+}
+
+  @media (min-width: 620px) {
+    .carousel-item img:nth-child(3) {
+      display: none;
+    }
+}
+
+  

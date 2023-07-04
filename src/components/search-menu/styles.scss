@@ -1,0 +1,26 @@
+@import "../../colors.scss";
+.nav-search-mobile{
+    justify-content: center;
+    margin: 15px;
+    gap: 16px;
+    height: 38px;
+    input{
+        width: 170px;
+        border: 1px solid $hamburguer-bottom;
+        &:focus{
+            outline: 3px solid $green-meteora;
+
+        }
+    }
+    button{
+        height: 100%;
+        background-color: $white-color;
+        color: $dark-color;
+        border: 1px solid $dark-color;
+        &:hover{
+            background-color: $dark-color;
+            color: $white-color;
+            cursor: pointer;
+        }
+    }
+}
