@@ -11,7 +11,6 @@ import { EmailField } from './components/email-field';
 import { Footer } from './components/footer';
 
 function App() {
-  
   return (
     <>
     <FilterContextProvider>
