@@ -1,5 +1,10 @@
 import "./button-style.scss";
 
 export function Button(props){
-    return <button>{props.children}</button>
+    const handleClick = () => {
+        if (props.onClick) {
+          props.onClick();
+        }
+      };
+    return <button className="btn-react" onClick={handleClick}>{props.children}</button>
 }
