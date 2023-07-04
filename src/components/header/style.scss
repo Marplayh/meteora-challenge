@@ -1,0 +1,188 @@
+@import '../../colors.scss';
+.header-container {
+    width: 100%;
+    height: 58px;
+    padding: 13px 23px;
+    background: $dark-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.mobile-header{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 999;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    @media(max-width: 920px){
+      font-size: 13px;
+      gap: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 18px;
+        font-family: inherit;
+        line-height: 23px;
+        color: $white-color;
+        white-space: nowrap;
+
+        &:hover{
+            transition: 0.5s;
+            font-size: 20px;
+            color: $green-meteora;
+        }
+        @media(max-width: 900px){
+          font-size: 13px;
+        }
+    }
+}
+
+.nav-search{
+    display: flex;
+    gap: 16px;
+    height: 38px;
+    input{
+        border: 1px solid var(--input-state-default, #CED4DA);
+        font-family: inherit;
+        font-size: 15px;
+        line-height: 24px;
+    }
+    input:focus{
+        outline: 3px solid $green-meteora;
+    }
+    input::placeholder{
+        color: #6C757D;
+        font-size: 15px;
+        font-family: inherit;
+        line-height: 24px;
+        padding-left: 10px;
+    }
+    
+}
+.button-header{
+  display: inline-flex;
+  padding: 9px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: $white-color;
+  border: 1px solid $white-color;
+  background-color: $dark-color;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.457px;
+  &:hover{
+      transition: .50s;
+      cursor: pointer;
+      background-color: $white-color;
+      color: $dark-color;
+  }
+}
+
+.hamburguer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .hamburguer-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .hamburguer-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $green-meteora;
+  }
+  
+  .hamburguer-menu.open .menu-items {
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    height: 260px;
+    width: 145px;
+    padding: 42px 24px;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(70px) translatex(20px);
+    background-color: $hamburger-background;
+    a{
+        display: block;
+        font-family: inherit;
+        color: $white-color;
+        white-space: nowrap;
+        font-size: 16px;
+        border-bottom: 1px solid $hamburguer-bottom;
+        &:hover{
+          color: $green-meteora;
+          text-decoration: none;
+          font-weight: 600;
+        }
+    }
+    a:last-child{
+        border-bottom: none;
+    }
+  }
+  .menu-items{
+    display: none;
+  }
+
+  .close-icon{
+    font-size: 20px;
+    font-weight: 800;
+    color: $green-meteora;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  .container-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+  }
+
+  .nav-search-mobile {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: $white-color;
+  }
+  
+  .nav-search-mobile input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .logo-menu{
+    background-color: $dark-color;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    a img{
+      width: 100px;
+      z-index: 9999;
+    }
+  }
+  

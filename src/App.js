@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import './components/header/style.scss';
+import Header from './components/header/header.js';
+import BannersCarousel from './components/carousel/carrousel';
+import ProductsCategory from './components/category-products/products';
+import { ProductSection } from './components/products-section';
+import { FilterContextProvider } from './context/filter-context';
+import { SocialMedias } from './components/social-medias/social-medias';
+import { EmailField } from './components/email-field';
+import { Footer } from './components/footer';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <FilterContextProvider>
+      <Header></Header>
+        <BannersCarousel></BannersCarousel>
+        <ProductsCategory></ProductsCategory>
+        <ProductSection></ProductSection>
+    </FilterContextProvider>
+    <SocialMedias/>
+    <EmailField/>
+    <Footer/>
+    </>
   );
 }
 

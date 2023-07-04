@@ -1,0 +1,17 @@
+<div class="carousel-item active">
+                    <img class="principal" src={ImageBanner} alt="Imagem Banner"/>
+                    <img class="principal" src={TabletImage} alt="Imagem Banner"/>
+                    <img class="principal" src={MobileImage} alt="Imagem Banner"/>
+                </div>
+                <div class="carousel-item">
+                    <div className='segundo'>
+                        <img class="imagens" src={SecondImg} alt="Imagem Banner"/>
+                        <img class="imagens" src={SecondImgtablet} alt="Imagem Banner"/>
+                        <img class="imagens" src={SecondImgMobile} alt="Imagem Banner"/>
+                        
+                        <div className='texto'>
+                            <h1>Coleção Atemporal</h1>
+                            <p>Estilo e qualidade para durar</p>
+                        </div>
+                    </div>
+                </div> 

@@ -1,0 +1,35 @@
+@import "../../colors.scss";
+
+.mainContainer{
+   display: flex;
+   padding: 50px 160px;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+   h1{
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: inherit;
+   }
+   @media(max-width: 760px){
+    padding: 50px 39px;
+   }
+}
+
+.products-list{
+   display: grid;
+   gap: 30px;
+   grid-template-columns: auto auto auto;
+   @media(max-width: 760px){
+    grid-template-columns: auto auto;
+   }
+   @media(max-width: 620px){
+    grid-template-columns: auto;
+   }
+}
+
+    
